@@ -19,21 +19,22 @@
  */
 
 class NumberArray {
-    private:
+private:
     int size;
     double*data;
     static const int MAX_SIZE = 10;
 
-    public:
+public:
     NumberArray(int size= MAX_SIZE);
     ~NumberArray();
     NumberArray(const NumberArray &) = delete;
     NumberArray & operator=(const NumberArray &) = delete;
-};
-void setNumber(int index, double value);
-double getNumber(int index) const;
-double getLowest() const;
-double getHighest() const;
-double getAverage() const;
 
+    void setNumber(int index, double value);
+    double getNumber(int index) const;
+    double getMin() const;
+    double getMax() const;
+    double getAverage() const;
+    void print() const;
+};
 #endif //NUMBERARRAY_CLASS_NUMBERARRAY_H
